@@ -4,11 +4,74 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css /style.css.css">
   <title>AstroScope</title>
 </head>
 
 <body>
+  <header>
+    <div class="logo">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 100" width="100%" height="auto">
+  <!-- Define Gradient -->
+  <defs>
+    <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color: #ff6b6b; stop-opacity: 1" />
+      <stop offset="100%" style="stop-color: #5f27cd; stop-opacity: 1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Logo Text -->
+  <text x="50%" y="50%" text-anchor="middle" fill="url(#gradient)" font-size="60" font-family="Orbitron, sans-serif">
+    AstroScope
+  </text>
+</svg>
+    </div>
+    
+    <div>
+      <button class="light-dark-toggle">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="50" height="50">
+    <!-- Sun Rays -->
+    <circle cx="25" cy="25" r="10" fill="yellow" class="sun-core" />
+    <line x1="25" y1="5" x2="25" y2="15" stroke="yellow" stroke-width="3" class="sun-ray" />
+    <line x1="25" y1="35" x2="25" y2="45" stroke="yellow" stroke-width="3" class="sun-ray" />
+    <line x1="5" y1="25" x2="15" y2="25" stroke="yellow" stroke-width="3" class="sun-ray" />
+    <line x1="35" y1="25" x2="45" y2="25" stroke="yellow" stroke-width="3" class="sun-ray" />
+    <!-- Moon Crescent -->
+    <circle cx="25" cy="25" r="10" fill="black" />
+    <circle cx="20" cy="25" r="7" fill="yellow" />
+  </svg>
+</button>
+    </div>
+    
+  </header>
   
+  <main>
+    <h2>Astronomy Picture of The Day</h2> 
+    <div class="fetch">
+      <form action="#">
+        <input type="date" class="date">
+        <button id="fetchimg">Fetch APOD</button>
+      </form>
+    </div>
+    
+    <div id="reults">
+      <img src="./image/secbg.jpg" alt="Astronomy Picture Of The Day">
+      
+      <iframe src="" frameborder="4" allowfullscreen></iframe>
+      
+      <div id="nav">
+        <p>Prev</p>
+        <p>Next</p>
+      </div>
+      
+      <p id="description"></p>
+    </div>
+  </main>
+  
+  <footer>
+    <!--Tab to edit-->
+  </footer>
 </body>
 
 </html>
